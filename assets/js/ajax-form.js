@@ -1,4 +1,7 @@
 $(function() {
+        
+        // Set the url
+        var baseUrl = 'https://ilseman-marzen-wedding.herokuapp.com/rsvps/'
 
 	// Get the form.
 	var form = $('#rsvp-form');
@@ -17,7 +20,7 @@ $(function() {
 		// Submit the form using AJAX.
 		$.ajax({
 			type: 'POST',
-			url: $(form).attr('action'),
+			url: baseUrl + $(form).attr('action'),
 			data: formData
 		})
 		.done(function(response) {
