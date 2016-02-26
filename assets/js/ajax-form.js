@@ -1,7 +1,7 @@
 $(function() {
 
         // Set the url
-        var baseUrl = 'https://ilseman-marzen-wedding.herokuapp.com/rsvps/'
+        var baseUrl = 'https://ilseman-marzen-wedding.herokuapp.com/rsvps'
 
 	// Get the form.
 	var form = $('#rsvp-form');
@@ -22,7 +22,8 @@ $(function() {
 			type: 'POST',
 			url: baseUrl, // $(form).attr('action'),
 			data: formData,
-      crossDomain: true
+                        crossDomain: true
+                        //data: { rsvp: { guest: "hard code"} },
 		})
 		.done(function(response) {
 			// Make sure that the formMessages div has the 'alert-success' class.
