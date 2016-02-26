@@ -1,5 +1,8 @@
 $(function() {
 
+        // Set the url
+        var baseUrl = 'https://ilseman-marzen-wedding.herokuapp.com/rsvps'
+
 	// Get the form.
 	var form = $('#rsvp-form');
 
@@ -17,8 +20,10 @@ $(function() {
 		// Submit the form using AJAX.
 		$.ajax({
 			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
+			url: baseUrl, // $(form).attr('action'),
+			data: formData,
+                        crossDomain: true
+                        //data: { rsvp: { guest: "hard code"} },
 		})
 		.done(function(response) {
 			// Make sure that the formMessages div has the 'alert-success' class.
@@ -38,6 +43,7 @@ $(function() {
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'alter-danger' class.
+      console.log(data);
 			$(formMessages).removeClass('alert alert-success');
 			$(formMessages).addClass('alert alert-danger');
 
