@@ -125,8 +125,8 @@ $(document).ready(function() {
     var feed = new Instafeed({
             limit: 28,
             get: 'tagged',
-            tagName: 'filmweddingphotographer', /* Remember to use a unique hastag for the wedding */
-            clientId: "467ede5a6b9b48ae8e03f4e2582aeeb3", /* IMPORTANT: REPLACE THE DEMO CLIENTID WITH YOUR CLIENTID! Find out your clientID: http://darkwhispering.com/how-to/get-a-instagram-client_id-key */
+            tagName: 'melalwedding', /* Remember to use a unique hastag for the wedding */
+            clientId: "45d600dfd0384536a3b9758e08e8fc88", /* DONE---IMPORTANT: REPLACE THE DEMO CLIENTID WITH YOUR CLIENTID! Find out your clientID: http://darkwhispering.com/how-to/get-a-instagram-client_id-key */
             resolution: 'thumbnail',
             template: '<a class="instagram-item item" href="{{link}}" target="_blank"><img class="img-responsive" src="{{image}}" /></a>',
             sortBy: 'most-liked',
