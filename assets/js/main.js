@@ -79,39 +79,39 @@ $(document).ready(function() {
     /* ======= Google Map ======= */
     map = new GMaps({
         div: '#map',
-        lat: 41.519949,
+        lat: 41.539500,
         lng: -90.578726,
         scrollwheel: false,
-        zoom: 15,
+        zoom: 13,
     });
 
     map.addMarker({
-        lat: 41.519949,
-        lng: -90.578726,
+        lat: 41.544820,
+        lng: -90.575575,
         verticalAlign: 'top',
         title: 'Ceremony Location',
         infoWindow: {
-            content: '<div class="note">Ceremony & Reception</div><h4 class="map-title script">Frieght House Train Station</h4><div class="address"><span class="region">421 W River Dr</span><br><span class="">52801</span><br><span class="city-name">Davenport, IA</span></div>'
+            content: '<div class="note">Ceremony</div><h4 class="map-title script">Vanderveer Rose Garden</h4><div class="address"><span class="region">215 W Central Park Ave</span><br><span class="city-name">Davenport, IA</span></div>'
         }
 
 
     });
 
 
-    //map.addMarker({
-    //    lat: 41.519949,
-    //    lng: -90.578726,
-    //    title: 'Reception Location',
-    //    infoWindow: {
-    //        content: '<div class="note">Reception</div><h4 class="map-title script">The Manor House</h4><div class="address"><span class="region">Address line goes here</span><br><span class="postal-code">Postcode</span><br><span class="city-name">City</span></div>'
-    //    }
-    //
-    //});
+    map.addMarker({
+        lat: 41.519949,
+        lng: -90.578726,
+        title: 'Reception Location',
+        infoWindow: {
+            content: '<div class="note">Reception</div><h4 class="map-title script">The Frieght House Upstairs</h4><div class="address"><span class="region">421 W River Dr</span><br><span class="city-name">Davenport, IA</span></div>'
+        }
+    
+   });
 
-    /*display marker 1 address on load */
-    google.maps.event.trigger(map.markers[0], 'click');
     /*display marker 2 address on load */
     google.maps.event.trigger(map.markers[1], 'click');
+    /*display marker 1 address on load */
+    google.maps.event.trigger(map.markers[0], 'click');
 
 
 

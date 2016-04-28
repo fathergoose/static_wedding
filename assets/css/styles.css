@@ -766,7 +766,8 @@ label {
   opacity: 1;
 }
 .brand-list img {
-  max-width: 160px;
+  max-width: 350px;
+  margin-top: -135px;
   -webkit-opacity: 0.8;
   -moz-opacity: 0.8;
   opacity: 0.8;
